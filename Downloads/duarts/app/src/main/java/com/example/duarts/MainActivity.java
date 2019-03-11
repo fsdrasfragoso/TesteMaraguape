@@ -14,14 +14,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.duarts.fragmentos.BlankFragment;
 import com.example.duarts.fragmentos.buscaProdutoFragmento;
 import com.example.duarts.fragmentos.clientesFragmento;
 import com.example.duarts.fragmentos.painelFragmento;
 import com.example.duarts.fragmentos.produtoFragmento;
 import com.example.duarts.fragmentos.registroClienteFragmento;
 import com.example.duarts.fragmentos.rotasFragmento;
-import com.example.duarts.fragmentos.testeFragmento;
 import com.example.duarts.interfaces.Ifragmentos;
 
 public class MainActivity extends AppCompatActivity
