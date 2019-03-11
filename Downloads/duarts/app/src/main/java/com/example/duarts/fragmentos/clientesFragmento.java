@@ -77,26 +77,17 @@ public class clientesFragmento extends Fragment {
         v = inflater.inflate(R.layout.fragment_clientes_fragmento, container, false);
 
         WebView webView = (WebView)v.findViewById(R.id.webview);
-        assert webView != null;
+
+
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setDomStorageEnabled(true);
         webView.getSettings().setPluginState(WebSettings.PluginState.ON);
-        webView.getSettings().setAllowFileAccess(true);
-        webView.getSettings().setAllowFileAccessFromFileURLs(true);
-        webView.getSettings().setAllowUniversalAccessFromFileURLs(true);
+
         webView.setWebViewClient(new WebViewClient());
-        webView.setWebChromeClient(new WebChromeClient(){
-            // Need to accept permissions to use the camera
-            @Override
-            public void onPermissionRequest(PermissionRequest request) {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    request.grant(request.getResources());
-                }
-            }
-        });
+
         webView.loadUrl("https://app.duarts.com.br/home");
 
-        return inflater.inflate(R.layout.fragment_clientes_fragmento, container, false);
+        return v;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

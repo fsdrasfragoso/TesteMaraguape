@@ -39,7 +39,9 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
 
 
-
+        Fragment meuFragmento = new clientesFragmento();
+        getSupportFragmentManager().beginTransaction().replace(R.id.content_main, meuFragmento).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.content_main, meuFragmento).commit();
 
 
 
@@ -94,10 +96,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_produto) {
             meuFragmento = new produtoFragmento();
             fragmentoSelect = true;
-        } else if (id == R.id.nav_consulta_produto) {
-            meuFragmento = new buscaProdutoFragmento();
-            fragmentoSelect = true;
-        } else if (id == R.id.nav_cadastro_cliente) {
+        }else if (id == R.id.nav_cadastro_cliente) {
             meuFragmento = new registroClienteFragmento();
             fragmentoSelect = true;
         } else if (id == R.id.nav_lista_cliente) {
